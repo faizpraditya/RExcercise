@@ -1,8 +1,0 @@
-Function filter digunakan untuk memfilter data frame berdasarkan kriteria yang diinginkan
-
-VARIABLE CASE SENSITIVE
-
-Operasi matematika bisa digunakan di mutate.
-Function transmute biasa digunakan jika ingin membuat kolom baru
-
-Yang menarik dari dplyr adalah kita bisa melakukan piping, yaitu melakukan beberapa operasi sekaligus hanya dalam sekali menjalankan source code.
