@@ -1,0 +1,20 @@
+#Function read digunakan untuk membaca/import file CSV
+#yang akan diubah menjadi data frame di R
+
+#Operations yang dapat dilakukan terhadap dataset
+#summary(dataset)
+#head(dataset,10), tampilkan summary teratas, bisa diberi
+#parameter berapa data teratas yang ingin ditampilkan
+#Nrow(dataset), menghitung jumlah baris
+#Ncol(dataset), menghitung jumlah kolom
+
+#Operations data frame di R dengan menggunakan library dplyr
+#Install library dplyr(deployer), packages->install
+#Dplyr adalah suatu library yang biasa digunakan oleh
+#data scientist untuk memanipulasi data frame melalui R
+#Install lib Tidyverse
+#Tidyverse adalah suatu LIBRARY yang berisi kumpulan packages
+#di R yang digunakan untuk DATA FRAME dan juga operasi lain
+#yang terkait dengan data science
+
+Function select digunakan untuk mengambill beberapa kolom dari data frame.

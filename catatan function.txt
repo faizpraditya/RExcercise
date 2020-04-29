@@ -1,0 +1,42 @@
+> luas_lingkaran <- function(jari){
++   pi <- 3.14
++   luas <- pi*(jari^2)
++   return(luas)
++ }
+> luas_lingkaran(10)
+[1] 314
+
+> luas_segitiga = function(alas, tinggi){
++   return((alas*tinggi)/2)
++ }
+> luas_segitiga(10,10)
+[1] 50
+> hw <- function(){
++   print("Hai dunia, hehe.")
++ }
+> hw()
+[1] "Hai dunia, hehe."
+> lima <- function(){
++   print(5)
++ }
+> lima()
+[1] 5
+>     print(i)
+[1] "Dedi"
+> berhitung(1)
+Error in berhitung(1) : could not find function "berhitung"
+> berhitung(1)
+Error in berhitung(1) : could not find function "berhitung"
+> berhitung <- function (n){
++   for (i in 1:n) {
++     print(i)
++   }
++ }
+> berhitung(1)
+[1] 1
+> berhitung(5)
+[1] 1
+[1] 2
+[1] 3
+[1] 4
+[1] 5

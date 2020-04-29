@@ -1,0 +1,33 @@
+c() adalah koordinat
+Gunakan aplikasi colour picker untuk menggunakan warna yang lebih bervariasi.
+geom_point(color='#535e29') + 
+
+Bisa memberi warna yang berbeda di setiap titik untuk setiap category. Size juga bisa.
+Titik
+geom_point(aes(color=category), size=5) +
+Garis
+geom_smooth(method = "lm", color='#535e29', linetype='dashed', size=2) +
+linetype=dashed, dotted, longdash, dotdash
+
+Bisa mengubah bentuk titik menjadi bentuk lain.
+
+Modifikasi Title, sub, caption, legend.
+Bisa jadi satu, bisa terpisah.
+theme(
+    plot.title = element_text(color = 'navy', size = 15, face = 'bold'),
+    plot.subtitle = element_text(size = 12, face = 'italic'),
+    #legend.position = 'bottom'
+    legend.position = c(0,8,0,2)
+  )
+  theme(
+    #legend.position = 'bottom'
+    legend.position = c(0.8,0.2),
+    legend.title = element_text(color='blue', size=12, face="bold"),
+    legend.text = element_text(color='red')
+  )
+
+Menyimpan plot
+#secara default, yang disimpan adalah plot yang terakhir.
+#Parameter ke-2 digunakan untuk memilih plot mana yang ingin di simpan.
+ggsave('tes.png',plot1)
+ggsave('tes2.png',plot2)

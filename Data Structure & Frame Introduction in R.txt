@@ -1,0 +1,172 @@
+> names = c("Adi","Budi","Cindi","Dedi")
+> names[1]
+[1] "Adi"
+> names[4]
+[1] "Dedi"
+> names[2:4]
+[1] "Budi"  "Cindi" "Dedi" 
+> names[c(1,3)]
+[1] "Adi"   "Cindi"
+
+#Factor, mirip seperti vector, ditambah informasi mengenai distinct value.
+> factor(names)
+[1] Adi   Budi  Cindi Dedi 
+Levels: Adi Budi Cindi Dedi
+> factor(c("male","female","female","male","male"))
+[1] male   female female male  
+[5] male  
+Levels: female male
+
+#Matrix, Seperti vector, namun menjadi dua dimensi.
+> m = matrix(1:12,nrow = 3)
+> m
+     [,1] [,2] [,3] [,4]
+[1,]    1    4    7   10
+[2,]    2    5    8   11
+[3,]    3    6    9   12
+> m[4]
+[1] 4
+> m[2,3]
+[1] 8
+>
+> #Array, bisa lebih dari dua dimensi.
+> a = array(1:24, c(3,4,2))
+> a
+, , 1
+
+     [,1] [,2] [,3] [,4]
+[1,]    1    4    7   10
+[2,]    2    5    8   11
+[3,]    3    6    9   12
+
+, , 2
+
+     [,1] [,2] [,3] [,4]
+[1,]   13   16   19   22
+[2,]   14   17   20   23
+[3,]   15   18   21   24
+
+> a[1,3,1]
+[1] 7
+
+#Data Frame, Bentuknya seperti tabel, dimana baris
+#menunjukkan objek, dan kolom menunjukkan atribut.
+> users <- data.frame(
++   name = names,
++   gender = c("male","male","female","male"),
++   age = c(10,20,30,40)
++ )
+> View(users)
+> View(users)
+> users
+   name gender age
+1   Adi   male  10
+2  Budi   male  20
+3 Cindi female  30
+4  Dedi   male  40
+> 
+> users[1]
+   name
+1   Adi
+2  Budi
+3 Cindi
+4  Dedi
+> users[2]
+  gender
+1   male
+2   male
+3 female
+4   male
+> users['name']
+   name
+1   Adi
+2  Budi
+3 Cindi
+4  Dedi
+> users['age','name']
+[1] <NA>
+Levels: Adi Budi Cindi Dedi
+> users['ages','name']
+[1] <NA>
+Levels: Adi Budi Cindi Dedi
+> users['name','age']
+[1] NA
+> users[c('age','name')]
+  age  name
+1  10   Adi
+2  20  Budi
+3  30 Cindi
+4  40  Dedi
+> users[c('name','age')]
+   name age
+1   Adi  10
+2  Budi  20
+3 Cindi  30
+4  Dedi  40
+> users[2,]
+  name gender age
+2 Budi   male  20
+> users[2:3]
+  gender age
+1   male  10
+2   male  20
+3 female  30
+4   male  40
+> users[2:3,2]
+[1] male   female
+Levels: female male
+> users[2:3.2]
+  gender age
+1   male  10
+2   male  20
+3 female  30
+4   male  40
+> users[2:3.1]
+  gender age
+1   male  10
+2   male  20
+3 female  30
+4   male  40
+> users[2:3,]
+   name gender age
+2  Budi   male  20
+3 Cindi female  30
+> users[2:3,2]
+[1] male   female
+Levels: female male
+> users[2:3,1]
+[1] Budi  Cindi
+Levels: Adi Budi Cindi Dedi
+
+#List, Berisi kumpulan data yang tipe
+#datanya bisa berbeda-beda
+> l = list(a,names,users)
+> l
+[[1]]
+, , 1
+
+     [,1] [,2] [,3] [,4]
+[1,]    1    4    7   10
+[2,]    2    5    8   11
+[3,]    3    6    9   12
+
+, , 2
+
+     [,1] [,2] [,3] [,4]
+[1,]   13   16   19   22
+[2,]   14   17   20   23
+[3,]   15   18   21   24
+
+
+[[2]]
+[1] "Adi"   "Budi"  "Cindi" "Dedi" 
+
+[[3]]
+   name gender age
+1   Adi   male  10
+2  Budi   male  20
+3 Cindi female  30
+4  Dedi   male  40
+
+> View(l)
+> View(l)
